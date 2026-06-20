@@ -17,7 +17,7 @@ void solve(vector<int>&arr,int i,vector<int>&temp,vector<vector<int>>&ans,int ta
     //skip
     solve(arr,i+1,temp,ans,target);
 }
-    vector<vector<int>> combinationSum(vector<int>& arr, int target) {
+    vector<vector<int>> combinationSum(vector<int> arr, int target) {
         vector<int>temp;
         vector<vector<int>>ans;
         solve(arr,0,temp,ans,target);
