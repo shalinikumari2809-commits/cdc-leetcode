@@ -11,22 +11,24 @@
  */
 class Solution {
 public:
-    void preorder(TreeNode* root, vector<int>& ans) {
+    void preorder(TreeNode* root, vector<int>& ans) {//yha ans ceate kiye h taki root ke value ko drectly stote kr ske
+
+        //base case
         if (root == NULL)
             return;
 
-        // Root
+        // Root(N)
         ans.push_back(root->val);
 
-        // Left
+        // Left(L)
         preorder(root->left,ans);
 
-        // Right
+        // Right(R)
         preorder(root->right,ans);
     }
 
     vector<int> preorderTraversal(TreeNode* root) {
-        vector<int> ans;
+        vector<int> ans; //node ko store krne ke liye
 
         preorder(root, ans);
 
